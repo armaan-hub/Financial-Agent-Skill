@@ -77,20 +77,16 @@ python3 run_audit_council.py \
   --output my_audit_report.md
 ```
 
-### 3. OpenCode Zen Free Tier Models
-The local runner connects by default to OpenCode Zen free models:
+### 3. OpenCode Zen Free Model Configuration
+The runner connects by default to OpenCode Zen using the single pre-configured model:
 - `laguna-s-2.1-free` (Default active model)
-- `deepseek-v4-flash-free`
-- `minimax-m3-free`
-- `mimo-v2.5-free`
-- `nemotron-3-super-free`
 
 ```bash
-# List available free tier models
-python3 run_audit_council.py --list-free-models
+# Run with default OpenCode Zen model
+python3 run_audit_council.py --sample
 
-# Run with a specific free model
-python3 run_audit_council.py --sample --model deepseek-v4-flash-free
+# Provide custom OpenCode key
+python3 run_audit_council.py --sample --api-key "sk-..."
 ```
 
 ### 4. Local OpenAI Proxy / LM Studio / Ollama
